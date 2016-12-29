@@ -1,5 +1,7 @@
 'use strict'
 
+const ApiModel = require('../models/api')
+
 let controller = {}
 
 /**
@@ -10,9 +12,8 @@ let controller = {}
 *
 */
 controller.getInfo = function * () {
-  this.body = {
-    version: '0.2.0'
-  }
+  let apiInfo = yield ApiModel.findOne()
+  this.body = apiInfo
 }
 
 module.exports = controller

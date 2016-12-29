@@ -12,7 +12,7 @@ before(function () {
     agent: agent(argv.url || server),
     fixtures: {
       api: {
-        version: '0.2.0'
+        version: ''
       }
     }
   }
