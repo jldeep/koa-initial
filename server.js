@@ -6,9 +6,12 @@ const logger = require('koa-logger')
 const config = require('./config')
 const fs = require('fs')
 const path = require('path')
+const errorHandler = require('./lib/errorHandler')
 
 // logger
 server.use(logger())
+// Error Handler
+server.use(errorHandler())
 
 // Read routers folder and add it
 for (let controller of fs.readdirSync(path.resolve('routers'))) {
