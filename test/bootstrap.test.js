@@ -13,7 +13,8 @@ before(function () {
     fixtures: {
       api: {
         version: ''
-      }
+      },
+      users: []
     }
   }
 })
